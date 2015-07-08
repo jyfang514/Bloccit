@@ -17,6 +17,11 @@ posts = Post.all
   )
 end
 
+Post.create!(
+  title: 'This is Bloc',
+  body: 'It is not easy'
+)
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
