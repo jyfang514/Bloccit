@@ -17,6 +17,13 @@ posts = Post.all
   )
 end
 
+unless Post.exists?(title: 'This is different')
+  Post.create!(
+    title: "This is different",
+    body: "It sure is"
+  )
+end
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
